@@ -121,9 +121,9 @@ VUser 구하기
 
 **smoke**
 
-![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/025651d3-a857-4bc8-a24e-a0ef10942b7d/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221224%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221224T020424Z&X-Amz-Expires=86400&X-Amz-Signature=ac16ce5fcb9d960c5ccd3658393d25adf2e5dafaed159dc4b750f6ad44e2460c&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Untitled.png%22&x-id=GetObject)
+![smoke.png](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/025651d3-a857-4bc8-a24e-a0ef10942b7d/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221225%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221225T101832Z&X-Amz-Expires=86400&X-Amz-Signature=5bfd7d8963a61be704c37346e00f23952bb239839a68845cad6405119ff64917&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Untitled.png%22&x-id=GetObject)
 
-![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/c9dc93a5-1e6c-4648-8a1a-dd83dbd3688c/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221224%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221224T020455Z&X-Amz-Expires=86400&X-Amz-Signature=6c93df54cd6268a3c0978a6d75db578db74098251941326d97a11bdc32d21119&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Untitled.png%22&x-id=GetObject)
+![smoke.png](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/c9dc93a5-1e6c-4648-8a1a-dd83dbd3688c/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221225%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221225T101843Z&X-Amz-Expires=86400&X-Amz-Signature=96a3664a4cd4fef7eed993f450cc465f627dbecc15ddeb0ae6b14b28d3ea62bb&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Untitled.png%22&x-id=GetObject)
 
 ```javascript
 import http from 'k6/http';
@@ -175,7 +175,8 @@ export default function()  {
 
 **load**
 
-![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/55d76780-c51b-4304-9a0e-20df87300a29/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221224%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221224T020611Z&X-Amz-Expires=86400&X-Amz-Signature=c8a491d23f1f3c38e78e40583c156936b744298131e40cba4bda3d4019bf1c93&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Untitled.png%22&x-id=GetObject)
+![load.png](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/956469c3-89fe-426f-9899-6c5f0bee7715/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221225%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221225T101800Z&X-Amz-Expires=86400&X-Amz-Signature=4238605630ea67aad8c042fc15faca4d97a028fba426a296b250fe2e1e5b989b&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Untitled.png%22&x-id=GetObject)
+![load.png](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/6390e155-0359-4410-bf5a-ed0d5d101a74/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221225%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221225T101927Z&X-Amz-Expires=86400&X-Amz-Signature=04a867a8dfcf49d0adbbf8da40a12f33aac4f51fd058832b160d2e0906d507a9&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Untitled.png%22&x-id=GetObject)
 
 ```javascript
 import http from 'k6/http';
@@ -183,9 +184,9 @@ import { check, sleep } from 'k6';
 
 export const options = {
     stages: [
-        {duration: '10s', target: 130},
-        {duration: '30s', target: 130},
-        {duration: '10s', target: 0},
+        {duration: '1m', target: 130},
+        {duration: '5m', target: 130},
+        {duration: '1m', target: 0},
     ],
 //    vus: 1,
 //    duration: '1m',
@@ -228,7 +229,7 @@ export default function()  {
 
 **stress**
 
-![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/e0e216c2-e221-4a6d-b143-e173d57b5329/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221224%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221224T020625Z&X-Amz-Expires=86400&X-Amz-Signature=aa5d4cecaabeda148ff2dabca19748e1d4e13a20023714ef44f2ddc371832678&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Untitled.png%22&x-id=GetObject)
+![stress.png](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/8fb619b6-0573-45cd-b3f0-7d24fdc8f30c/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221225%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221225T102009Z&X-Amz-Expires=86400&X-Amz-Signature=5f5e9e241c5ca69e8fc48af108d1f6628277c35a14ad6089593efa5fc5bc06a8&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Untitled.png%22&x-id=GetObject)
 
 ```javascript
 import http from 'k6/http';
@@ -236,12 +237,12 @@ import { check, sleep } from 'k6';
 
 export const options = {
     stages: [
-        {duration: '5s', target: 20},
-        {duration: '5s', target: 40},
-        {duration: '5s', target: 80},
-        {duration: '5s', target: 130},
-        {duration: '5s', target: 195},
-        {duration: '5s', target: 0},
+        {duration: '2m', target: 20},
+        {duration: '2m', target: 40},
+        {duration: '2m', target: 80},
+        {duration: '2m', target: 130},
+        {duration: '2m', target: 195},
+        {duration: '2m', target: 0},
     ],
 //    vus: 1,
 //    duration: '1m',
